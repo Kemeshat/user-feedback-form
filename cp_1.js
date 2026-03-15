@@ -55,6 +55,14 @@ card.innerHTML= `
 
 display.appendChild(card);
 
+form.addEventListener ("click", function (event){
+
+    event.stopPropagation();
+});
+
+document.addEventListener("click", function (){
+console.log ("You clicked outside the form!");
+});
 
 
 
