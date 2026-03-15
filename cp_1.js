@@ -43,5 +43,19 @@ form.reset();
 charCount.textContent = "0";
 });
 
+const display = document.getElementById("feedback-display");
+
+const card = document.createElement("div");
+
+card.innerHTML= `
+<h3>${nameInput.value}</h3>
+<p>${emailInput.value}</p>
+<p>${comments.value}</p>
+`;
+
+display.appendChild(card);
+
+
+
 
 
