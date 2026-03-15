@@ -27,6 +27,21 @@ tip.style.display = "none";
     }
 });
 
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+
+form.addEventListener("submit", function (event){
+event.preventDefault();
+
+if (nameInput.value === "" || emailInput.value === "" || comments.value === ""){
+alert ("Please fill out all fields before submitting.");
+return;
+}
+
+alert ("Thank you for your feedback!");
+form.reset();
+charCount.textContent = "0";
+});
 
 
 
