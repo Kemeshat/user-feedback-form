@@ -1,35 +1,121 @@
-body{
-    font-family: Arial;
-    background: f4f4f4;
-    padding: 30px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-form{
-    background:white;
-    padding: 20px;
-    width: 300px;
-    border-radius: 5px;
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-input, textarea{
+form {
+    background: #fff;
+    padding: 25px 30px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+form:hover {
+    transform: translateY(-3px);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #555;
+}
+
+input, textarea {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-button{
-padding: 10px;
-background: blue;
-color: white;
-border: none;
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+    outline: none;
 }
 
-.tooltip{
-display:none;
-color: gray;
-font-size: 12px;
+button {
+    margin-top: 20px;
+    padding: 12px 0;
+    width: 100%;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
 }
 
-#feedback-display{
+button:hover {
+    background: #0056b3;
+    transform: scale(1.02);
+}
+
+.tooltip {
+    display: none;
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+    font-style: italic;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.char-count {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #333;
+    text-align: right;
+}
+
+#feedback-display {
     margin-top: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.feedback-card {
+    background: #fff;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.feedback-card h3 {
+    margin: 0;
+    color: #007BFF;
+    font-size: 16px;
+}
+
+.feedback-card p {
+    margin: 5px 0 0 0;
+    color: #555;
+    font-size: 14px;
 }
